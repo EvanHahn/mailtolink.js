@@ -1,0 +1,27 @@
+{
+  "name": "mailtolink",
+  "version": "0.0.0",
+  "description": "create mailto: links",
+  "main": "mailtolink.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvanHahn/mailtolink.js.git"
+  },
+  "keywords": [
+    "mailto",
+    "email",
+    "href"
+  ],
+  "author": "Evan Hahn <me@evanhahn.com> (http://evanhahn.com)",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/EvanHahn/mailtolink.js/issues"
+  },
+  "homepage": "https://github.com/EvanHahn/mailtolink.js#readme",
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
