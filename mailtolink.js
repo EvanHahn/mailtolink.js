@@ -9,22 +9,23 @@
     }
 
     var queryString = [];
-    options = options || {};
-    if (options.subject) {
-      queryString.push('subject=' + encodeURIComponent(options.subject));
-    }
-    if (options.cc) {
-      queryString.push('cc=' + options.cc);
-    }
-    if (options.bcc) {
-      queryString.push('bcc=' + options.bcc);
-    }
-    if (options.body) {
-      queryString.push('body=' + encodeURIComponent(options.body).replace(/%0A/g, '%0D%0A'));
-    }
+    if (options) {
+      if (options.subject) {
+        queryString.push('subject=' + encodeURIComponent(options.subject));
+      }
+      if (options.cc) {
+        queryString.push('cc=' + options.cc);
+      }
+      if (options.bcc) {
+        queryString.push('bcc=' + options.bcc);
+      }
+      if (options.body) {
+        queryString.push('body=' + encodeURIComponent(options.body).replace(/%0A/g, '%0D%0A'));
+      }
 
-    if (queryString.length) {
-      result.push('?', queryString.join('&'));
+      if (queryString.length) {
+        result.push('?', queryString.join('&'));
+      }
     }
 
     return result.join('');
