@@ -2,10 +2,8 @@
   function mailtoLink(to, options) {
     var result = ['mailto:'];
 
-    if (isString(to)) {
+    if (isString(to) || Array.isArray(to)) {
       result.push(to);
-    } else if (Array.isArray(to)) {
-      result.push(to.join(','));
     } else {
       options = to;
     }
