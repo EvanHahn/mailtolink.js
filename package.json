@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvanHahn/mailtolink.js.git"
+    "url": "https://codeberg.org/EvanHahn/mailtolink.js.git"
   },
   "keywords": [
     "mailto",
@@ -24,9 +24,9 @@
   "author": "Evan Hahn <me@evanhahn.com> (http://evanhahn.com)",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/EvanHahn/mailtolink.js/issues"
+    "url": "https://codeberg.org/EvanHahn/mailtolink.js/issues"
   },
-  "homepage": "https://github.com/EvanHahn/mailtolink.js#readme",
+  "homepage": "https://codeberg.org/EvanHahn/mailtolink.js",
   "engines": {
     "node": ">=24.12.0"
   },
