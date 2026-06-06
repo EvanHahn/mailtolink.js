@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/EvanHahn/mailtolink.js#readme",
   "devDependencies": {
-    "mocha": "^2.3.3"
+    "mocha": "^11.7.6"
   }
 }
