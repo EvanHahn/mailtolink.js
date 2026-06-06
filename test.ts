@@ -1,4 +1,4 @@
-import { mailtolink as link } from "./mailtolink.js";
+import { mailtolink as link } from "./mailtolink.ts";
 import assert from "node:assert/strict";
 import test from "node:test";
 

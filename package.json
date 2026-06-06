@@ -2,13 +2,14 @@
   "name": "mailtolink",
   "version": "0.1.0",
   "description": "create mailto: links",
-  "main": "mailtolink.js",
+  "main": "mailtolink.ts",
   "type": "module",
   "scripts": {
     "format": "prettier --write .",
     "test:eslint": "eslint .",
     "test:prettier": "prettier --check .",
     "test:node": "node --test",
+    "test:typescript": "tsc --noEmit",
     "test": "run-p --aggregate-output test:*"
   },
   "repository": {
@@ -31,11 +32,13 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/node": "^25.9.2",
     "eslint": "^10.4.1",
     "globals": "^17.6.0",
     "jiti": "^2.7.0",
     "npm-run-all2": "^9.0.1",
     "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.60.1"
   }
 }

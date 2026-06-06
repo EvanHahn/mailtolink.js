@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "preserve",
+    "allowImportingTsExtensions": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "types": ["node"],
+    "strict": true
+  }
+}
