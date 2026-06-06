@@ -4,6 +4,7 @@
   "description": "create mailto: links",
   "main": "mailtolink.js",
   "scripts": {
+    "format": "prettier --write .",
     "test": "mocha"
   },
   "repository": {
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/EvanHahn/mailtolink.js#readme",
   "devDependencies": {
-    "mocha": "^11.7.6"
+    "mocha": "^11.7.6",
+    "prettier": "^3.8.3"
   }
 }
