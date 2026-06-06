@@ -3,36 +3,36 @@ var link = require(".");
 var assert = require("node:assert/strict");
 var test = require("node:test");
 
-test("single To", function () {
+test("single To", () => {
   assert.equal(link("jane@example.com"), "mailto:jane@example.com");
 });
 
-test("multiple Tos", function () {
+test("multiple Tos", () => {
   assert.equal(
     link(["jane@example.com", "jill@example.com", "esmeralda@example.com"]),
     "mailto:jane@example.com,jill@example.com,esmeralda@example.com",
   );
 });
 
-test("one CC with no To", function () {
+test("one CC with no To", () => {
   assert.equal(link({ cc: "jane@example.com" }), "mailto:?cc=jane@example.com");
 });
 
-test("multiple CCs with no To", function () {
+test("multiple CCs with no To", () => {
   assert.equal(
     link({ cc: ["jane@example.com", "jill@example.com"] }),
     "mailto:?cc=jane@example.com,jill@example.com",
   );
 });
 
-test("one CC with one To", function () {
+test("one CC with one To", () => {
   assert.equal(
     link("jill@example.com", { cc: "jane@example.com" }),
     "mailto:jill@example.com?cc=jane@example.com",
   );
 });
 
-test("one CC and one BCC", function () {
+test("one CC and one BCC", () => {
   assert.equal(
     link({
       cc: "jane@example.com",
@@ -42,7 +42,7 @@ test("one CC and one BCC", function () {
   );
 });
 
-test("subject", function () {
+test("subject", () => {
   assert.equal(
     link({
       subject: "Hello & welcome!",
@@ -51,7 +51,7 @@ test("subject", function () {
   );
 });
 
-test("body", function () {
+test("body", () => {
   assert.equal(
     link({
       body: "Hello!\n...and welcome!",
@@ -60,7 +60,7 @@ test("body", function () {
   );
 });
 
-test("the whole shebang", function () {
+test("the whole shebang", () => {
   assert.equal(
     link(["jane@example.com"], {
       cc: "jill@example.com",
