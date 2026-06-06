@@ -21,7 +21,7 @@
     "email",
     "href"
   ],
-  "author": "Evan Hahn <me@evanhahn.com> (http://evanhahn.com)",
+  "author": "Evan Hahn <me@evanhahn.com> (https://evanhahn.com)",
   "license": "Unlicense",
   "bugs": {
     "url": "https://codeberg.org/EvanHahn/mailtolink.js/issues"

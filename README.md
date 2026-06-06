@@ -45,10 +45,10 @@ mailtolink({
   body: [
     "I thought you might really enjoy this photo of a store I found:",
     "",
-    "http://example.com/tienda.jpg",
+    "https://example.com/tienda.jpg",
   ].join("\n"),
 });
-// => mailto:?subject=Check%20out%20this%20photo&body=I%20thought%20you%20might%20really%20enjoy%20this%20photo%20of%20a%20store%20I%20found%3A%0D%0A%0D%0Ahttp%3A%2F%2Fexample.com%2Ftienda.jpg'
+// => mailto:?subject=Check%20out%20this%20photo&body=I%20thought%20you%20might%20really%20enjoy%20this%20photo%20of%20a%20store%20I%20found%3A%0D%0A%0D%0Ahttps%3A%2F%2Fexample.com%2Ftienda.jpg'
 ```
 
 Generate a link with an email, a subject, a CC, a body, and some BCCs:
