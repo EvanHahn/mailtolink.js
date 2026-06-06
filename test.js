@@ -1,4 +1,4 @@
-var link = require("..");
+var link = require(".");
 
 var assert = require("node:assert/strict");
 var test = require("node:test");
