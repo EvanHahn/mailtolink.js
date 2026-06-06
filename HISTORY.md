@@ -6,5 +6,6 @@
 - **Breaking:** Node 24.12.0+ is now required
 - **Breaking:** This package now uses TypeScript. You must be able to import, or transpile, TypeScript
 - **Breaking:** This package now uses ECMAScript Modules instead of CommonJS
+- Improved handling of edge cases, per [RFC 6068](https://tools.ietf.org/html/rfc6068)
 
 This changelog was created after the release of 0.1.0.

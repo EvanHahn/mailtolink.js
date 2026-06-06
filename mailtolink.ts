@@ -13,10 +13,10 @@ export function mailtolink(
   to: Address | MailtolinkOptions,
   options?: MailtolinkOptions,
 ): string {
-  const result: Array<string | string[]> = ["mailto:"];
+  const result: string[] = ["mailto:"];
 
   if (isString(to) || Array.isArray(to)) {
-    result.push(to);
+    result.push(encodeAddresses(to));
   } else {
     options = to;
   }
@@ -27,15 +27,13 @@ export function mailtolink(
       queryString.push("subject=" + encodeURIComponent(options.subject));
     }
     if (options.cc) {
-      queryString.push("cc=" + options.cc);
+      queryString.push("cc=" + encodeAddresses(options.cc));
     }
     if (options.bcc) {
-      queryString.push("bcc=" + options.bcc);
+      queryString.push("bcc=" + encodeAddresses(options.bcc));
     }
     if (options.body) {
-      queryString.push(
-        "body=" + encodeURIComponent(options.body).replace(/%0A/g, "%0D%0A"),
-      );
+      queryString.push("body=" + encodeBody(options.body));
     }
 
     if (queryString.length) {
@@ -44,6 +42,25 @@ export function mailtolink(
   }
 
   return result.join("");
+}
+
+function encodeAddress(addr: string): string {
+  const encoded = encodeURIComponent(addr);
+  const lastAt = encoded.lastIndexOf("%40");
+  if (lastAt === -1) return encoded;
+  return encoded.slice(0, lastAt) + "@" + encoded.slice(lastAt + 3);
+}
+
+function encodeAddresses(addr: Address): string {
+  if (Array.isArray(addr)) {
+    return addr.map(encodeAddress).join(",");
+  }
+  return encodeAddress(addr);
+}
+
+function encodeBody(body: string): string {
+  const normalized = body.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+  return encodeURIComponent(normalized).replace(/%0A/g, "%0D%0A");
 }
 
 function isString(value: unknown): value is string {
