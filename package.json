@@ -5,6 +5,7 @@
   "main": "mailtolink.js",
   "scripts": {
     "format": "prettier --write .",
+    "test:eslint": "eslint .",
     "test:prettier": "prettier --check .",
     "test:node": "node --test",
     "test": "run-p --aggregate-output test:*"
@@ -28,7 +29,12 @@
     "node": ">=24.12.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.1",
+    "globals": "^17.6.0",
+    "jiti": "^2.7.0",
     "npm-run-all2": "^9.0.1",
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.3",
+    "typescript-eslint": "^8.60.1"
   }
 }
