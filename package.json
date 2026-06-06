@@ -24,6 +24,9 @@
     "url": "https://github.com/EvanHahn/mailtolink.js/issues"
   },
   "homepage": "https://github.com/EvanHahn/mailtolink.js#readme",
+  "engines": {
+    "node": ">=24.12.0"
+  },
   "devDependencies": {
     "npm-run-all2": "^9.0.1",
     "prettier": "^3.8.3"
