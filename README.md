@@ -2,11 +2,9 @@
 
 Makes `mailto:` links.
 
-In a CommonJS environment like Node or Browserify:
-
 ```js
-var mailtoLink = require("mailtolink");
-console.log(mailtoLink("esmeralda@example.com"));
+import { mailtolink } from "mailtolink";
+console.log(mailtolink("esmeralda@example.com"));
 ```
 
 ## Examples
@@ -14,35 +12,35 @@ console.log(mailtoLink("esmeralda@example.com"));
 Generate a link for one email address:
 
 ```js
-mailtoLink("esmeralda@example.com");
+mailtolink("esmeralda@example.com");
 // => mailto:esmeralda@example.com
 ```
 
 Generate a link for multiple email addresses:
 
 ```js
-mailtoLink(["esmeralda@example.com", "victoria@example.com"]);
+mailtolink(["esmeralda@example.com", "victoria@example.com"]);
 // => mailto:esmeralda@example.com,victoria@example.com
 ```
 
 Generate a link with an email and a subject:
 
 ```js
-mailtoLink("esmeralda@example.com", { subject: "¡Hola!" });
+mailtolink("esmeralda@example.com", { subject: "¡Hola!" });
 // => mailto:esmeralda@example.com?subject=%C2%A1Hola!
 ```
 
 Generate a link with just a subject:
 
 ```js
-mailtoLink({ subject: "¡Hola!" });
+mailtolink({ subject: "¡Hola!" });
 // => mailto:?subject=%C2%A1Hola!
 ```
 
 Generate a link with a subject and a body:
 
 ```js
-mailtoLink({
+mailtolink({
   subject: "Check out this photo",
   body: [
     "I thought you might really enjoy this photo of a store I found:",
@@ -56,7 +54,7 @@ mailtoLink({
 Generate a link with an email, a subject, a CC, a body, and some BCCs:
 
 ```js
-mailtoLink("esmeralda@example.com", {
+mailtolink("esmeralda@example.com", {
   subject: "Hi",
   cc: "victoria@example.com",
   bcc: ["mom@example.com", "dad@example.com"],
