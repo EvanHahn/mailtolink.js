@@ -5,7 +5,9 @@
   "main": "mailtolink.js",
   "scripts": {
     "format": "prettier --write .",
-    "test": "mocha"
+    "test:prettier": "prettier --check .",
+    "test:mocha": "mocha",
+    "test": "run-p --aggregate-output test:*"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "homepage": "https://github.com/EvanHahn/mailtolink.js#readme",
   "devDependencies": {
     "mocha": "^11.7.6",
+    "npm-run-all2": "^9.0.1",
     "prettier": "^3.8.3"
   }
 }
