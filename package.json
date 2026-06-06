@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "create mailto: links",
   "main": "mailtolink.js",
+  "type": "module",
   "scripts": {
     "format": "prettier --write .",
     "test:eslint": "eslint .",

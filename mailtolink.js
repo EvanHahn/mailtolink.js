@@ -1,4 +1,4 @@
-function mailtoLink(to, options) {
+export function mailtolink(to, options) {
   var result = ["mailto:"];
 
   if (isString(to) || Array.isArray(to)) {
@@ -35,5 +35,3 @@ function mailtoLink(to, options) {
 function isString(value) {
   return Object.prototype.toString.call(value) === "[object String]";
 }
-
-module.exports = mailtoLink;

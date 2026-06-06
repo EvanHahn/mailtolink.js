@@ -1,7 +1,6 @@
-var link = require(".");
-
-var assert = require("node:assert/strict");
-var test = require("node:test");
+import { mailtolink as link } from "./mailtolink.js";
+import assert from "node:assert/strict";
+import test from "node:test";
 
 test("single To", () => {
   assert.equal(link("jane@example.com"), "mailto:jane@example.com");
